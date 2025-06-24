@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Four Div Page View</title>
+  <style>
+    .page {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav {
+      margin-bottom: 20px;
+    }
+
+    .nav button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <button onclick="showPage(1)">Page 1</button>
+    <button onclick="showPage(2)">Page 2</button>
+    <button onclick="showPage(3)">Page 3</button>
+    <button onclick="showPage(4)">Page 4</button>
+  </div>
+
+  <div id="page1" class="page active">
+    <h2>Welcome to Page 1</h2>
+    <p>This is content inside Div 1.</p>
+  </div>
+
+  <div id="page2" class="page">
+    <h2>Welcome to Page 2</h2>
+    <p>This is content inside Div 2.</p>
+  </div>
+
+  <div id="page3" class="page">
+    <h2>Welcome to Page 3</h2>
+    <p>This is content inside Div 3.</p>
+  </div>
+
+  <div id="page4" class="page">
+    <h2>Welcome to Page 4</h2>
+    <p>This is content inside Div 4.</p>
+  </div>
+
+  <script>
+    function showPage(num) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach((page, index) => {
+        page.classList.remove('active');
+        if (index === num - 1) page.classList.add('active');
+      });
+    }
+  </script>
+
+</body>
+</html>
