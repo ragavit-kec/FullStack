@@ -1,0 +1,25 @@
+.navbar{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+    font-size: xx-large;
+    padding: 10px;
+    font-family: Georgia, 'Time New Roman', Times, serif;
+    width: 100%;
+
+}
+.navbar li a{
+    text-decoration: none;
+    color: black;
+}
+.navbar li a:hover{
+    color: brown;
+    text-decoration: underline;
+}
+li{
+    list-style: none;
+}

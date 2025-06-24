@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="script" href="index.html">
+    </head>
+    <body>
+        <h1>Form</h1>
+        <label for="name">Name:</label><br/>
+        <input type="text" name="name" id="name"><br>
+        <button onclick="hi()">click</button>
+        <div id="greet"></div>
+        <script>
+            function hi(){
+                const name=document.getElementById('name').value;
+                document.getElementById('greet').innerText=`Hi ${name} `;
+                console.log(`sucessfully send the message to the ${name}`);
+            }
+        </script>
+    </body>
+</html>
