@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Game</title>
+        <style>
+            body{
+                background: darkcyan;
+            }
+            h1{
+                text-align: center;
+            }
+            div{
+                display: flex;
+                justify-items: center;
+                justify-content: space-evenly;
+            }
+            button{
+                font-size: large;
+                color: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);            }
+            #button1{
+                background: grey;
+            }
+            #button2{
+                background: green;
+            }
+            #button3{
+                background: red;
+            }
+            h1{
+                color: darkblue;
+            }
+            #result{
+                color: greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Rock Paper Scissor</h1>
+        <div>
+            <button id="button1" onclick="game('rock')">🪨Rock</button>
+            <button id="button2" onclick="game('paper')">📃Paper</button>
+            <button id="button3" onclick="game('scissor')">✂️Scissor</button>
+        </div>
+        <h1 id="result">Result</h1>
+        <script>
+            function game(user){
+                const choices=['rock','paper','scissor']
+                let computer=choices[Math.floor(Math.random()*3)]
+                let result = ''
+                if(user===computer){
+                    result=`Its draw🙌`
+                }
+                else if((user==='rock' && computer==='scissor')
+                ||(user==='paper' && computer==='rock')
+                ||(user==='scissor' && computer==='paper')){
+                    result = `you Won 🥳`
+                }
+                else{
+                    result `You Lose 👎`
+                }
+                document.getElementById('result').innerText=result
+            }
+        </script>
+    </body>
+</html>
